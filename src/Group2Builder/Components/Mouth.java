@@ -4,8 +4,8 @@ import Group2Builder.Diet;
 
 public class Mouth {
 
-    String sound;
-    Diet diet;
+    private final String sound;
+    private final Diet diet;
 
     public Mouth(String sound, Diet diet) {
         this.sound = sound;
@@ -18,7 +18,7 @@ public class Mouth {
         }else return diet == food;
     }
 
-    public void makeSound(){
-        System.out.println("\""+sound+"\"");
+    public String makeSound(){
+        return sound;
     }
 }

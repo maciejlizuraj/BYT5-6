@@ -1,15 +1,17 @@
 package Group2Builder;
 
-import Group2Builder.Components.Movement;
 import Group2Builder.Components.Mouth;
+import Group2Builder.Components.Movement;
 
-public class ConcreteBuilder implements Builder {
+public class ManualBuilder implements Builder {
     private String name;
     private Movement movement;
     private Mouth mouth;
 
     @Override
-    public void setName(String name){this.name = name;}
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     public void setMovement(Movement movement) {
@@ -21,7 +23,7 @@ public class ConcreteBuilder implements Builder {
         this.mouth = mouth;
     }
 
-    public Animal getResult(){
-        return new Animal(name, movement, mouth);
+    public Manual getResult(){
+        return new Manual(name, movement, mouth);
     }
 }
